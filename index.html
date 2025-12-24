@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>경희대학교 DX추진단</title>
+
+  <script>
+    window.difyChatbotConfig = {
+      token: 'ZGMVkXbe1dJreBSX',
+      inputs: {
+        // You can define the inputs from the Start node here
+        // key is the variable name
+        // e.g.
+        // name: "NAME"
+      },
+      systemVariables: {
+        // user_id: 'YOU CAN DEFINE USER ID HERE',
+        // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+      },
+      userVariables: {
+        // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
+        // name: 'YOU CAN DEFINE USER NAME HERE',
+      },
+    }
+  </script>
+  <script src="https://udify.app/embed.min.js" id="ZGMVkXbe1dJreBSX" defer>
+  </script>
+  <style>
+    #dify-chatbot-bubble-button {
+      background-color: #1C64F2 !important;
+    }
+
+    #dify-chatbot-bubble-window {
+      width: 24rem !important;
+      height: 40rem !important;
+    }
+
+    /* Prevent auto-scroll during initial page load */
+    body.prevent-scroll {
+      overflow: hidden !important;
+      position: fixed !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  </style>
+  <script>
+    // Prevent auto-scroll by blocking scroll on body during initial load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add class to prevent scrolling
+      document.body.classList.add('prevent-scroll');
+      
+      // Force scroll to top
+      window.scrollTo(0, 0);
+      
+      // Remove the class after 3 seconds to allow normal scrolling
+      setTimeout(function() {
+        document.body.classList.remove('prevent-scroll');
+        // Ensure we're still at the top
+        window.scrollTo(0, 0);
+      }, 3000);
+    });
+  </script>
+</head>
+
+<body class="prevent-scroll">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
